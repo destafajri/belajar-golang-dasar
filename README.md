@@ -1,2 +1,2 @@
 # belajar-golang-dasar
-belajar golang
+lagi pengin belajar Golang
