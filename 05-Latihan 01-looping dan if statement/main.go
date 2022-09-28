@@ -8,7 +8,7 @@ func main() {
 
 	//mencetak index ganjil
 	for index, huruf := range sekarang {
-		if index % 2 != 0 {
+		if index % 2 != 0 && index != 0{
 		fmt.Println(string(huruf))
 		}
 	}
@@ -26,4 +26,5 @@ func main() {
 		fmt.Print(string(huruf))
 		}
 	}
+
 }
