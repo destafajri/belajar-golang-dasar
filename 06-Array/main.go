@@ -18,10 +18,23 @@ func main() {
 	angka[4] = 4
 	fmt.Println(angka)
 
+	//array dinamis
+	dinamis := [...] int {
+		4,
+		2,
+		3,
+		5,
+	}
+
+	fmt.Println(dinamis)
+
 	//mengetahui panjang array
 	fmt.Println(len(kata))
+
 	panjang := len(angka)
 	fmt.Println(panjang)
+	
+	fmt.Println(len(dinamis))
 
 
 }
