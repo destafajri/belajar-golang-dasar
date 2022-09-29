@@ -14,8 +14,10 @@ func main() {
 	//operasi matematika(soal-2)
 	//tanpa error
 	fmt.Println(calculation(5,5,"+"))
+
 	//dengan error
-	fmt.Println(calculation(5,6,"="))
+	int, error := calculation(5,6,"=")
+	fmt.Println(int, error)
 }
 
 //fungsi penjumlahan array
@@ -28,16 +30,16 @@ func sum(nilai[]int)int{
 }
 
 //fungsi aritmatika multiple return dengan error message
-func calculation(nilai1, nilai2 int, operator string) (string,int, error){
+func calculation(nilai1, nilai2 int, operator string) (int, error){
 	if operator == "+"{
-		return "result =",nilai1 + nilai2, nil
+		return nilai1 + nilai2, nil
 	}else if operator == "-"{
-		return "result =",nilai1 - nilai2, nil
+		return nilai1 - nilai2, nil
 	}else if operator == "*"{
-		return "result =",nilai1*nilai2, nil
+		return nilai1*nilai2, nil
 	}else if operator == "/" {
-		return "result =",nilai1/nilai2, nil
+		return nilai1/nilai2, nil
 	}else{
-		return "", 0 , errors.New("operasi salah")
+		return 0, errors.New("operator salah")
 	}
 }
