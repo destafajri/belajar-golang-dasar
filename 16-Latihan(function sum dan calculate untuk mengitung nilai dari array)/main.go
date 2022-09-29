@@ -16,8 +16,24 @@ func main() {
 	fmt.Println(calculation(5,5,"+"))
 
 	//dengan error
-	int, error := calculation(5,6,"=")
-	fmt.Println(int, error)
+	hasil, errorMsg := calculation(5,6,"=")
+	fmt.Println("hasil cetak biasa",hasil, errorMsg)
+	//mencetak dengan if condition
+	if errorMsg != nil{
+		fmt.Println(errorMsg.Error())
+	}else{
+		fmt.Println(hasil)
+	}
+
+	//tanpa error
+	//dengan error
+	hasil2, errorMsg2 := calculation(12,6,"*")
+	//mencetak dengan if condition
+	if errorMsg2 != nil{
+		fmt.Println(errorMsg2.Error())
+	}else{
+		fmt.Println(hasil2)
+	}
 }
 
 //fungsi penjumlahan array
