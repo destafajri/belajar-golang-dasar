@@ -2,11 +2,12 @@ package main
 import "fmt"
 
 func main() {
-	//memasukan parameter
+	//mengembalikan multiple value
 	luas1, keliling := luasdankeliling(2,3)
 	fmt.Println(luas1, keliling)
 
-	luas2, _ := luasdankeliling(5,3)
+	//mengembalikan hanya satu value 
+	luas2,_ := luasdankeliling(5,3)
 	fmt.Println(luas2)
 
 }
