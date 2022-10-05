@@ -13,13 +13,13 @@ type user struct{
 func main() {
 	user1 := user{1, "nana", "nini", "jakarta",true}
 
-	info := userInfo(user1)
-	fmt.Println(info)
+	information := userInfo(user1)
+	fmt.Println(information)
 
 }
 
 //fuction menggunakan parameter struct
 func userInfo(info user) string{
-	result := fmt.Sprintf("Name : %s %s, Adress : %s ", info.firstName, info.lastName, info.address)
+	result := fmt.Sprintf("Name : %s %s, Address : %s ", info.firstName, info.lastName, info.address)
 	return result
 }
